@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/okigan/angular-seed.svg?branch=master)](https://travis-ci.org/okigan/angular-seed)
-[![Code Climate](https://codeclimate.com/github/okigan/angular-seed/badges/gpa.svg)](https://codeclimate.com/github/okigan/angular-seed)
+[![Build Status](https://travis-ci.org/okigan/angular-sensible-seed.svg?branch=master)](https://travis-ci.org/okigan/angular-sensible-seed)
+[![Code Climate](https://codeclimate.com/github/okigan/angular-sensible-seed/badges/gpa.svg)](https://codeclimate.com/github/okigan/angular-sensible-seed)
 
 # angular-sensible-seed — the *sensible* seed for AngularJS apps
 Opinionated angular starter project with per feature directory structure, 
