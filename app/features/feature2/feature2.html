@@ -1,11 +1,20 @@
 
-<center><h2>GifMeSomething</h2>
-<p>A Javascript based client that generates a random gif based on a certain query.</p>
-<p> <span class="label label-success">Search</span> for a speific search or <span class="label label-warning">Random</span> for a randomized string specific search.</p>
-</center>
-
 
 <form class="form-horizontal" ng-controller="Feature2Ctrl">
+
+    <center><h2>GimMeSomething</h2>
+    <p>A Javascript based client that generates random media from
+
+    <select ng-model="media" style="color:red">
+        <option value="">-Please select-</option> <!-- not selected / blank option -->
+        <option value="true">Giphy</option>
+        <option value="false">Xkcd</option>
+    </select>
+    </p>
+    <p> <span class="label label-warning">Random</span> for a randomized string specific search.</p>
+    </center>
+
+
     <center><img ng-src="{{stuff}}" alt="Description" /></center>
     <br/>
       <div class="form-group">
@@ -15,12 +24,7 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-6">
-          <button type="submit" class="btn btn-success btn-sm raised" ng-click="submit()">Search</button>
-          <button type="submit" class="btn btn-warning btn-sm raised" ng-click="submit()">Random</button>
+          <center><button type="submit" class="btn btn-warning btn-sm raised" ng-click="submitTranslate()">Random</button></center>
         </div>
       </div>
-      {{ searchQuery }}
-      {{ stuff }}
-
-
 </form>

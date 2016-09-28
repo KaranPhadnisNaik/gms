@@ -21,9 +21,12 @@ Feature2Ctrl.$inject = [
 
 function Feature2Ctrl ($scope, $http) {
     //$scope.searchQuery = "randomthing";
-    $scope.stuff = 'http://i.giphy.com/GvUb9lnnnsjYY.gif';
-    $scope.submit = function() {
+    $scope.stuff = 'http://i.giphy.com/3orieUkdlKn2tYT8uQ.gif';
+    $scope.submitTranslate = function() {
         var query;
+
+        console.log($scope.media);
+
 
         if (false) // search querry is not alpha numeric
         {
@@ -33,14 +36,15 @@ function Feature2Ctrl ($scope, $http) {
         query = $scope.searchQuery.toLowerCase().split(' ').join('+');
 
         $http
-        .get('http://api.giphy.com/v1/gifs/search?q=' + query + '&limit=1&api_key=dc6zaTOxFJmzC')
+        .get('http://api.giphy.com/v1/gifs/translate?s=' + query + '&api_key=dc6zaTOxFJmzC')
         .then(function (response) {
             console.log("Request was a success");
             if(response.data.meta.msg === "OK") {
-                console.log(response.data.data[0].images.fixed_width_downsampled.url);
-                $scope.stuff = response.data.data[0].images.fixed_width_downsampled.url;
+                console.log(response.data.data.type);
+                $scope.stuff = response.data.data.images.fixed_height.url;
+
+                console.log($scope.media)
             }
         });
     };
-
 }
